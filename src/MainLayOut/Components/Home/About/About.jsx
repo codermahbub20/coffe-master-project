@@ -10,22 +10,22 @@ const About = () => {
 
                 <div className='space-y-1  font-rancho'>
                     <img src={TEA} alt="" />
-                    <h1 className='text-3xl'>Awesome Aroma</h1>
+                    <h1 className='text-3xl text-[#331A15]'>Awesome Aroma</h1>
                     <p className='text-xl'>You will definitely be a fan of the design & aroma of your coffee</p>
                 </div>
                 <div className='space-y-1  font-rancho'>
                     <img src={Badge} alt="" />
-                    <h1 className='text-3xl'>High Quality</h1>
+                    <h1 className='text-3xl text-[#331A15]'>High Quality</h1>
                     <p className='text-xl'>We served the coffee to you maintaining the best quality</p>
                 </div>
                 <div className='space-y-1  font-rancho'>
                     <img src={Photo} alt="" />
-                    <h1 className='text-3xl'>Pure Grades</h1>
+                    <h1 className='text-3xl text-[#331A15]'>Pure Grades</h1>
                     <p className='text-xl'>The coffee is made of the green coffee beans which you will love</p>
                 </div>
                 <div className='space-y-1  font-rancho'>
                     <img src={Coffee} alt="" />
-                    <h1 className='text-3xl'>Proper Roasting</h1>
+                    <h1 className='text-3xl text-[#331A15]'>Proper Roasting</h1>
                     <p className='text-xl'>Your coffee is brewed by first roasting the green coffee beans</p>
                 </div>
             </div>
