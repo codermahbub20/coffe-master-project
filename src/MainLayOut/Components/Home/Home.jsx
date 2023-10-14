@@ -1,19 +1,20 @@
-import Footer from "../Footer/Footer";
+
 import Gallery from "../Gallery/Gallery";
 import About from "./About/About";
 import Banner from "./Banner/Banner";
-import NavBar from "./NavBar/NavBar";
+import Product from "./Product/Product";
+
+
 
 
 const Home = () => {
+
     return (
         <div>
-            <NavBar></NavBar>
             <Banner></Banner>
             <About></About>
-
+            <Product></Product>
             <Gallery></Gallery>
-            <Footer></Footer>
         </div>
     );
 };

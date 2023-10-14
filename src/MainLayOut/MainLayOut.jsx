@@ -1,10 +1,15 @@
-import Home from "./Components/Home/Home";
+import { Outlet } from "react-router-dom";
+import NavBar from "./Components/Home/NavBar/NavBar";
+import Footer from "./Components/Footer/Footer";
+
 
 
 const MainLayOut = () => {
     return (
         <div>
-            <Home></Home>
+            <NavBar></NavBar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
