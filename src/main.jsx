@@ -9,6 +9,9 @@ import {
 import MainLayOut from './MainLayOut/MainLayOut';
 import Home from './MainLayOut/Components/Home/Home';
 import AddCoffee from './MainLayOut/Components/AddCoffee/AddCoffee';
+import UpdatedCoffee from './UpdatedCoffe/UpdatedCoffee';
+import ViewDetails from './MainLayOut/Components/ViewDetails/ViewDetails';
+
 
 
 
@@ -19,12 +22,21 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/coffee')
+        element: <Home></Home>
       },
       {
         path: "/addCoffee",
         element: <AddCoffee></AddCoffee>
+      },
+      {
+        path: "updatedcoffee/:id",
+        element: <UpdatedCoffee></UpdatedCoffee>,
+        loader : ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
+      },
+      {
+        path: "/details/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
       }
     ]
   },

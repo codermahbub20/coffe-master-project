@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import BackGround from '../../../assets/more/11.png'
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const AddCoffee = () => {
 
@@ -28,7 +29,16 @@ const AddCoffee = () => {
                 .then(res =>res.json())
                 .then(data =>{
                     console.log(data)
+                    if(data.insertedId){
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'YAY...!! Coffee Added Successfully Done !!',
+                            icon: 'success',
+                            confirmButtonText: 'Great'
+                          })
+                    }
                 })
+                form.reset()
         }
 
 

@@ -1,16 +1,27 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 import BG from '../../../../assets/more/1.png'
 import { RiCupLine } from "react-icons/ri";
-import { useState } from "react";
 import Coffee from "./Coffee";
+import { useEffect, useState } from "react";
 
 
 
 
 const Product = () => {
 
-    const coffees = useLoaderData()
+    // const coffees = useLoaderData()
+
+    const [coffees,setCoffees] = useState([])
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/coffee')
+        .then(res => res.json())
+        .then(data => {
+            setCoffees(data)
+        })
+    },[])
+
 
     return (
         <div className="min-h-screen  bg-no-repeat mt-2 bg-cover" style={{backgroundImage: `url(${BG})`}}>
@@ -21,7 +32,7 @@ const Product = () => {
             </div>
             <div className="grid lg:grid-cols-2 lg:w-3/4 mt-5 mb-5 mx-auto gap-7">
                 {
-                    coffees.map(coffee => <Coffee key={coffees._id} coffee={coffee}></Coffee>)
+                    coffees.map(coffee => <Coffee key={coffees._id} coffees={coffees} setCoffees={setCoffees} coffee={coffee}></Coffee>)
                 }
             </div>
         </div>
